@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      body {
+        background: #282828;
+        color: #f1f2f2;
+      }
+
+      .card {
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 200px 100px;
+        width: 200px;
+        height: 200px;
+        color: #ffffff;
+        font-size: 3em;
+        font-weight: 600;
+        transform: rotateZ(-25deg) rotateY(45deg) rotateX(45deg);
+      }
+
+      .c-1 {
+        top: 0;
+        background: #ff0000;
+        opacity: 0.6;
+        z-index: 0;
+      }
+
+      .c-2 {
+        top: -30px;
+        background: #ff2020;
+        opacity: 0.6;
+        z-index: 1;
+      }
+
+      .c-3 {
+        top: -60px;
+        background: #ff4040;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      .c-4 {
+        top: -90px;
+        background: #ff6060;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      .c-5 {
+        top: -120px;
+        background: #ff8080;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      .c-6 {
+        top: -150px;
+        background: #ff9f9f;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      .c-7 {
+        top: -180px;
+        background: #ff9d9d;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0.1;
+        }
+        25% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 0.3;
+        }
+        75% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 0.5;
+        }
+      }
+
+      .buttons {
+        position: absolute;
+        top: 420px;
+        left: 210px;
+        transform: translate(-50%, -50%);
+      }
+      .btn {
+        margin: 5px;
+        width: 50px;
+        height: 25px;
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="card c-1">L</div>
+        <div class="card c-2">O</div>
+        <div class="card c-3">A</div>
+        <div class="card c-4">D</div>
+        <div class="card c-5">I</div>
+        <div class="card c-6">N</div>
+        <div class="card c-7">G</div>
+
+        <section class="buttons">
+          <button class="btn" onclick="startAnimation()">Start</button>
+          <button class="btn" onclick="stopAnimation()">Stop</button>
+        </section>
+      </div>
+    </section>
+
+    <script>
+      let cards = document.getElementsByClassName("card");
+
+      function startAnimation() {
+        cards[0].style.animation = "fade 800ms ease 100ms infinite";
+        cards[1].style.animation = "fade 800ms ease 200ms infinite";
+        cards[2].style.animation = "fade 800ms ease 300ms infinite";
+        cards[3].style.animation = "fade 800ms ease 400ms infinite";
+        cards[4].style.animation = "fade 800ms ease 500ms infinite";
+        cards[5].style.animation = "fade 800ms ease 600ms infinite";
+        cards[6].style.animation = "fade 800ms ease 700ms infinite";
+      }
+
+      function stopAnimation() {
+        cards[0].style.animation = "none";
+        cards[1].style.animation = "none";
+        cards[2].style.animation = "none";
+        cards[3].style.animation = "none";
+        cards[4].style.animation = "none";
+        cards[5].style.animation = "none";
+        cards[6].style.animation = "none";
+      }
+    </script>
+  </body>
+</html>
